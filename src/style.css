@@ -5,10 +5,10 @@
 }
 
 ul {
-list-style-type: none;
-background-color: white;
-box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
-padding: 10px;
+  list-style-type: none;
+  background-color: white;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
 body {
@@ -24,7 +24,7 @@ li {
   justify-content: space-between;
 }
 
-li input{
+li input {
   border: none;
   outline: none;
 }
@@ -41,7 +41,7 @@ li input:focus::placeholder {
 li a {
   text-decoration: none;
   color: inherit;
-  opacity: .4;
+  opacity: 0.4;
 }
 
 .clear-item {
@@ -53,7 +53,7 @@ li a {
 }
 
 i {
-  opacity: .4;
+  opacity: 0.4;
   cursor: move;
 }
 

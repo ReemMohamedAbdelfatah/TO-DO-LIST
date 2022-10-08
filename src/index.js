@@ -1,44 +1,35 @@
-import _ from 'lodash';
 import './style.css';
-
 
 const container = document.querySelector('.todo-list');
 
-
-
 const list = [{
-description: 'Walk The Dog',
-isCompleted: true,
-index: 0
+  description: 'Walk The Dog',
+  isCompleted: true,
+  index: 0,
 },
 {
   description: 'Buy groceries',
   isCompleted: false,
-  index: 1
+  index: 1,
 },
 {
   description: 'Cook dinner',
   isCompleted: false,
-  index: 2
+  index: 2,
 }];
- 
-
 
 const showlist = () => {
-  let todoListContent  = '';
+  let todoListContent = '';
   list.forEach((item) => {
-    if(item.isCompleted === true)
-    {
+    if (item.isCompleted === true) {
       todoListContent += `<li class='list-item'><div><input class='item-check' id='desc' type='checkbox' checked/>${item.description}</div><a href='#'></a><i class='fas fa-ellipsis-v'></i></li>`;
-    }
-    else {
+    } else {
       todoListContent += `
-      <li class='list-item'><div><input class='item-check' id='desc' type='checkbox'/>${item.description}</div><i class='fas fa-ellipsis-v'></i></li>`
+      <li class='list-item'><div><input class='item-check' id='desc' type='checkbox'/>${item.description}</div><i class='fas fa-ellipsis-v'></i></li>`;
     }
-   
-    });
-    container.innerHTML += todoListContent;
-    container.innerHTML += `<li class='clear-item'><a href='#'>Clear all completed</a></li>`;
-}
+  });
+  container.innerHTML += todoListContent;
+  container.innerHTML += '<li class=\'clear-item\'><a href=\'#\'>Clear all completed</a></li>';
+};
 
 document.addEventListener('DOMContentLoaded', showlist);

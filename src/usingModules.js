@@ -1,4 +1,5 @@
 /*
+import _ from 'lodash';
 import todo from '../modules/todo'
 
 const description = document.querySelector('#desc-input').value;
