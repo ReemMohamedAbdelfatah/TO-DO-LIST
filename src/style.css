@@ -15,23 +15,31 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f6f6f6;
 }
 
 li {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid rgb(237, 236, 236);
   padding: 10px;
   display: flex;
   justify-content: space-between;
+  margin-right: -10px;
+  margin-left: -10px;
 }
 
 li input {
   border: none;
   outline: none;
+  margin-right: 20px;
 }
 
 li input:focus {
   border: none;
   outline: none;
+}
+
+li input::placeholder {
+  font-style: italic;
 }
 
 li input:focus::placeholder {
@@ -50,6 +58,9 @@ li a {
   background-color: rgb(248, 246, 246);
   border-bottom: none;
   justify-content: center;
+  margin-right: -10px;
+  margin-left: -10px;
+  margin-bottom: -10px;
 }
 
 i {

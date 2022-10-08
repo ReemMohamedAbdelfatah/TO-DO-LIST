@@ -16,7 +16,7 @@
 
 # Live Demo
 
-[Live Demo Link](https://reemmohamedabdelfatah.github.io/TO-DO-LIST/)
+[Live Demo Link](https://reemmohamedabdelfatah.github.io/TO-DO-LIST/dist/)
 
 
 # Built With
@@ -78,8 +78,7 @@ Eslint for correct javascript files.
 - Hat tip to anyone whose code was used
 - Inspiration
 - etc
-- Design
-Credit goes to **Cindy Shin's** design on [Behance] (https://www.behance.net/gallery/29845175/CC-Global-Summit-2015). This is a mockup of Cindy's design.
+
 
 ## 🤝 Contributing
 

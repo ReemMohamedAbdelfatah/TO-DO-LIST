@@ -10,16 +10,17 @@ const list = [{
 {
   description: 'Buy groceries',
   isCompleted: false,
-  index: 1,
+  index: 2,
 },
 {
   description: 'Cook dinner',
   isCompleted: false,
-  index: 2,
+  index: 1,
 }];
 
 const showlist = () => {
   let todoListContent = '';
+  list.sort((a, b) => a.index - b.index);
   list.forEach((item) => {
     if (item.isCompleted === true) {
       todoListContent += `<li class='list-item'><div><input class='item-check' id='desc' type='checkbox' checked/>${item.description}</div><a href='#'></a><i class='fas fa-ellipsis-v'></i></li>`;
