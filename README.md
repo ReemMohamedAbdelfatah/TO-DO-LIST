@@ -9,10 +9,7 @@
 
 ## Screenshot
 
-![readme](./assets/screenshoots/M1.png)
-![readme](./assets/screenshoots/M2.png)
-![readme](./assets/screenshoots/D1.png)
-![readme](./assets/screenshoots/D2.png)
+![readme](./screenshoot.png)
 
 # Live Demo
 
