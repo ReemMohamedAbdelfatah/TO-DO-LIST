@@ -1,36 +1,24 @@
 import './style.css';
+import todo from '.././modules/todo.js'
+import store from '.././modules/store.js'
+import UI from '.././modules/UI.js'
+const addButton = document.querySelector('#addBtn');
+const todoText = document.querySelector('#desc-input');
+let counter = -1;
 
-const container = document.querySelector('.todo-list');
+const list = [];
+document.addEventListener('DOMContentLoaded', () => {
+  UI.showToList;
+});
 
-const list = [{
-  description: 'Walk The Dog',
-  isCompleted: true,
-  index: 0,
-},
-{
-  description: 'Buy groceries',
-  isCompleted: false,
-  index: 2,
-},
-{
-  description: 'Cook dinner',
-  isCompleted: false,
-  index: 1,
-}];
-
-const showlist = () => {
-  let todoListContent = '';
-  list.sort((a, b) => a.index - b.index);
-  list.forEach((item) => {
-    if (item.isCompleted === true) {
-      todoListContent += `<li class='list-item'><div><input class='item-check' id='desc' type='checkbox' checked/>${item.description}</div><a href='#'></a><i class='fas fa-ellipsis-v'></i></li>`;
-    } else {
-      todoListContent += `
-      <li class='list-item'><div><input class='item-check' id='desc' type='checkbox'/>${item.description}</div><i class='fas fa-ellipsis-v'></i></li>`;
-    }
-  });
-  container.innerHTML += todoListContent;
-  container.innerHTML += '<li class=\'clear-item\'><a href=\'#\'>Clear all completed</a></li>';
-};
-
-document.addEventListener('DOMContentLoaded', showlist);
+const add = (e) => {
+e.preventDefault();
+  const newToDo = new todo(todoText.value, false, counter+1);
+  console.log(todoText);
+    store.addToDo(newToDo);
+    counter++;
+    UI.showToList();
+    
+    todoText.value='';
+}
+addButton.addEventListener('click', add);

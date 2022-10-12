@@ -11,11 +11,11 @@
   <header>
   <h1><%= htmlWebpackPlugin.options.title %></h1>
   </header>
-  <section>
+  <form action="#">
   <ul class="todo-list">
     <li>Today's TO DO</li>
-    <li class='list-item'><input class='item-input' id="desc-input" placeholder='Add to your list ...'/></li>
+    <li class='list-item'><input class='item-input' id="desc-input" placeholder='Add to your list ...'/><button class='fa fa-plus-square btn' type="submit" id="addBtn"></button></li>
   </ul>
-</section>
+</form>
 </body>
 </html>

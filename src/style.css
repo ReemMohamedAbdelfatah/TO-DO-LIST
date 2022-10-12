@@ -71,3 +71,7 @@ i {
 section {
   width: 50%;
 }
+
+.btn {
+  cursor: pointer;
+}
