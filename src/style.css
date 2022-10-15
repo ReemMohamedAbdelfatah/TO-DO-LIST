@@ -132,3 +132,7 @@ input:focus {
 input::placeholder {
   font-style: italic;
 }
+
+td p {
+  margin-left: 0;
+}
