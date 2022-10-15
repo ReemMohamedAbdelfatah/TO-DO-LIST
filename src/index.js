@@ -1,36 +1,43 @@
 import './style.css';
+import DomToDo from './modules/domDisplay.js';
+import CreateToDo from './modules/todoConstruct.js';
+import Storage from './modules/localStorage.js';
 
-const container = document.querySelector('.todo-list');
+document.addEventListener('DOMContentLoaded', DomToDo.displayToDo);
+document.getElementById('completedBtn').addEventListener('click', () => {
+  Storage.removeCompleted();
+});
 
-const list = [{
-  description: 'Walk The Dog',
-  isCompleted: true,
-  index: 0,
-},
-{
-  description: 'Buy groceries',
-  isCompleted: false,
-  index: 2,
-},
-{
-  description: 'Cook dinner',
-  isCompleted: false,
-  index: 1,
-}];
-
-const showlist = () => {
-  let todoListContent = '';
-  list.sort((a, b) => a.index - b.index);
-  list.forEach((item) => {
-    if (item.isCompleted === true) {
-      todoListContent += `<li class='list-item'><div><input class='item-check' id='desc' type='checkbox' checked/>${item.description}</div><a href='#'></a><i class='fas fa-ellipsis-v'></i></li>`;
-    } else {
-      todoListContent += `
-      <li class='list-item'><div><input class='item-check' id='desc' type='checkbox'/>${item.description}</div><i class='fas fa-ellipsis-v'></i></li>`;
-    }
-  });
-  container.innerHTML += todoListContent;
-  container.innerHTML += '<li class=\'clear-item\'><a href=\'#\'>Clear all completed</a></li>';
-};
-
-document.addEventListener('DOMContentLoaded', showlist);
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const todoL = Storage.getToDo();
+  const toDoInput = document.getElementById('todo-input').value;
+  const id = todoL.length + 1;
+  const completed = false;
+  const todo = new CreateToDo(toDoInput, id, completed);
+  DomToDo.addToDoList(todo);
+  Storage.addTodo(todo);
+  DomToDo.clearField();
+});
+document.getElementById('to-do-container').addEventListener('click', (e) => {
+  Storage.editInput(
+    e.target.parentElement.parentElement.children[4].textContent,
+    e.target.parentElement,
+    e.target.parentElement.parentElement,
+    e.target.parentElement.parentElement.children[2].children[0],
+  );
+  DomToDo.deleteTodo(e.target);
+  if (e.target.classList.contains('check')) {
+    Storage.checkboxCompleted(
+      e.target.parentElement.parentElement.children[4],
+      e.target.checked,
+    );
+    e.target.parentElement.parentElement.children[2].children[0].classList.toggle(
+      'strike-through',
+    );
+  }
+  Storage.remove(
+    e.target.parentElement.previousElementSibling.previousElementSibling
+      .textContent,
+  );
+});
