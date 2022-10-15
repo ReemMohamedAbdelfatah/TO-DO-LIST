@@ -1,24 +1,43 @@
 import './style.css';
-import todo from '.././modules/todo.js'
-import store from '.././modules/store.js'
-import UI from '.././modules/UI.js'
-const addButton = document.querySelector('#addBtn');
-const todoText = document.querySelector('#desc-input');
-let counter = -1;
+import DomToDo from './modules/domDisplay.js';
+import CreateToDo from './modules/todoConstruct.js';
+import Storage from './modules/localStorage.js';
 
-const list = [];
-document.addEventListener('DOMContentLoaded', () => {
-  UI.showToList;
+document.addEventListener('DOMContentLoaded', DomToDo.displayToDo);
+document.getElementById('completedBtn').addEventListener('click', () => {
+  Storage.removeCompleted();
 });
 
-const add = (e) => {
-e.preventDefault();
-  const newToDo = new todo(todoText.value, false, counter+1);
-  console.log(todoText);
-    store.addToDo(newToDo);
-    counter++;
-    UI.showToList();
-    
-    todoText.value='';
-}
-addButton.addEventListener('click', add);
+document.querySelector('form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const todoL = Storage.getToDo();
+  const toDoInput = document.getElementById('todo-input').value;
+  const id = todoL.length + 1;
+  const completed = false;
+  const todo = new CreateToDo(toDoInput, id, completed);
+  DomToDo.addToDoList(todo);
+  Storage.addTodo(todo);
+  DomToDo.clearField();
+});
+document.getElementById('to-do-container').addEventListener('click', (e) => {
+  Storage.editInput(
+    e.target.parentElement.parentElement.children[4].textContent,
+    e.target.parentElement,
+    e.target.parentElement.parentElement,
+    e.target.parentElement.parentElement.children[2].children[0],
+  );
+  DomToDo.deleteTodo(e.target);
+  if (e.target.classList.contains('check')) {
+    Storage.checkboxCompleted(
+      e.target.parentElement.parentElement.children[4],
+      e.target.checked,
+    );
+    e.target.parentElement.parentElement.children[2].children[0].classList.toggle(
+      'strike-through',
+    );
+  }
+  Storage.remove(
+    e.target.parentElement.previousElementSibling.previousElementSibling
+      .textContent,
+  );
+});
