@@ -1,6 +1,6 @@
 import Storage from './localStorage.js';
 import returnImg from '../assets/return.svg';
-import kebab from '../assets/kebab.svg';
+import threeDots from '../assets/threedots.svg';
 
 document.getElementById('returnImg').src = returnImg;
 class DomToDo {
@@ -21,7 +21,7 @@ class DomToDo {
     <td> <input class='check'  id='checkBox' type="checkbox" checked /><td>
     <td><p class='paragragh strike-through'> ${todo.description}</p><td>
     <td class='hide'>${todo.id}</td>
-    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
+    <td><img class='kebabImg' src="${threeDots}" alt="" /></td>
     <td><a href="#" class='delete'>🗑</a><td>
     `;
     } else {
@@ -29,7 +29,7 @@ class DomToDo {
     <td> <input class='check'  id='checkBox' type="checkbox" /><td>
     <td><p class='paragragh'> ${todo.description}</p><td>
     <td class='hide'>${todo.id}</td>
-    <td><img class='kebabImg' src="${kebab}" alt="" /></td>
+    <td><img class='kebabImg' src="${threeDots}" alt="" /></td>
 
     <td><a href="#" class='delete'>🗑</a><td>
 
