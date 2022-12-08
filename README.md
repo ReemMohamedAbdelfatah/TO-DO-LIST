@@ -1,37 +1,71 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+<a id="readme-top"></a>
 
-# TO-DO-LIST
+<div align="center">
 
-> Description the project.
+  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <br/>
+
+</div>
+
+<!-- TABLE OF CONTENTS -->
+
+# 📗 Table of Contents
+
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
+
+<!-- PROJECT DESCRIPTION -->
+
+# 📖 Awesome Books App <a name="about-project"></a>
+
+**TO DO LIST App** 
 - It simply lists the things that you need to do and allows you to mark them as complete, and it uses ES6 and Webpack.
 - Single page website.
 - configure with linters.
 
-## Screenshot
+## 🛠 Built With <a name="built-with"></a>
 
-![readme](./screenshoot.png)
+### Tech Stack <a name="tech-stack"></a>
 
-# Live Demo
+- HTML
+- CSS
+- JavaScript
 
-[Live Demo Link](https://reemmohamedabdelfatah.github.io/TO-DO-LIST/dist/)
+<!-- Features -->
 
+### Key Features <a name="key-features"></a>
 
-# Built With
-Major languages: HTML-CSS-JS
-Frameworks: NodeJS, Webpack, Es6 Modules
-Technologies used: VSCode, GitHub, Linter
+- **UI is made of medium-fidelity wireframe**
+- **Add and show list data**
+- **Persistent data storage in local storage**
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Getting Started
-To get a local copy, follow these simple steps.
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
+
 Web browser installed
 VSCode to be installed.
 GitHub account.
 Even Git Bash or VSCode Source of Control to clone it in your local machine.
 
 ### Setup
+
 Cloning a repository
 * on Github.com, navigate to the main page of the repository;
 * Above the list of files, click "Code" button; 
@@ -63,31 +97,55 @@ Styelint for auto-correct CSS errors or fixing the CSS style.
 WebHint for cross-browser compatibility, speed, and to improve your Web's accessibility.
 Eslint for correct javascript files.
 
-## Authors
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-👤 **Reem Muhammed**
+<!-- AUTHORS -->
 
-- GitHub: [@github](https://github.com/ReemMohamedAbdelfatah)
+## 👥 Authors <a name="authors"></a>
+
+👤 **Reem Mohamed**
+
+- GitHub: [@githubhandle](https://github.com/ReemMohamedAbdelfatah)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/reem-abd-el-fatah-a07543116)
 
-## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
 
-## 🤝 Contributing
+## 🔭 Future Features <a name="future-features"></a>
+
+- **Convert UI to high fidelity**
+- **Add remove and edit functionalities**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/ReemMohamedAbdelfatah/AwsomeBooksApp/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank Microverse for the inspiration
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
+<!-- LICENSE -->
 
-## 📝 License
+## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
