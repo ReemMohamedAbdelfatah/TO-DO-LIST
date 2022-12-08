@@ -1,5 +1,5 @@
 import './style.css';
-import Todo from '../modules/todo.js';
+import todo from '../modules/todo.js';
 import store from '../modules/store.js';
 import UI from '../modules/UI.js';
 
@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 const add = (e) => {
   e.preventDefault();
-  const newToDo = new Todo(todoText.value, false, counter + 1);
+  const newToDo = new todo(todoText.value, false, counter + 1);
   store.addToDo(newToDo);
-  counter += 1;
+  counter++;
   UI.showToList();
 
   todoText.value = '';
